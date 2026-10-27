@@ -5,7 +5,7 @@ follow monthly KPIs and see where your money goes.
 
 **Live demo:** https://alaa-hdaya.github.io/CoinGuard/
 
-![Coin Guard dashboard](screenshots/dashboard.png)
+![Coin Guard dashboard](dashboard.png)
 
 ## Features
 - **Add income and expenses** with title, amount, category and date
@@ -25,19 +25,18 @@ follow monthly KPIs and see where your money goes.
 | Savings rate | net this month ÷ income this month |
 
 ## Tech stack
-HTML5 · CSS3 · JavaScript (vanilla) · [Chart.js](https://www.chartjs.org/) 4.4.1 (included in `vendor/`, MIT license) · localStorage
+HTML5 · CSS3 · JavaScript (vanilla) · [Chart.js](https://www.chartjs.org/) 4.4.1 (included as `chart.umd.js`, MIT license) · localStorage
 
 ## Project structure
 ```
-CoinGuard/
-├── index.html          landing page
-├── style.css
-├── dashboard/
-│   ├── index.html      the dashboard
-│   ├── dashboard.css
-│   └── dashboard.js    data, KPIs, charts, transactions
-├── vendor/chart.umd.js
-└── screenshots/
+index.html        landing page
+style.css
+dashboard.html    the dashboard
+dashboard.css
+dashboard.js      data, KPIs, charts, transactions
+chart.umd.js      Chart.js library
+dashboard.png     screenshot
+landing.png       screenshot
 ```
 
 ## Run it

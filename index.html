@@ -1,156 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coin Guard | Dashboard</title>
-  <link rel="stylesheet" href="dashboard.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coin Guard – Personal Finance Dashboard</title>
+  <meta name="description" content="Coin Guard: track income and expenses, follow monthly KPIs and see where your money goes.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- Top Bar -->
-  <header class="topbar">
-    <a href="../index.html" class="brand">
-      <span class="logo-dot"></span>
-      <span class="brand-name">Coin Guard</span>
-    </a>
+  <section id="hero">
+    <h1>COIN GUARD</h1>
+    <p>Manage your income, expenses and savings easily.</p>
+    <a href="#about" class="scroll-down">Scroll down ↓</a>
+  </section>
 
-    <div class="top-actions">
-      <button id="btnAddIncome" class="btn btn-dark">+ Add Income</button>
-      <button id="btnAddExpense" class="btn btn-light">– Add Expense</button>
+  <section id="about">
+    <h2>About Coin Guard</h2>
+    <p>
+      In a world where managing personal finances is more crucial than ever, having a clear and
+      effective tool is essential. Coin Guard helps you track your income, control your expenses
+      and follow your savings, all from a single dashboard.
+    </p>
+  </section>
+
+  <section id="features">
+    <h2>Features</h2>
+
+    <div class="features-container">
+      <div class="card">
+        <h3>Track</h3>
+        <p>Record income and expenses by category in a few clicks.</p>
+      </div>
+
+      <div class="card">
+        <h3>Analyze</h3>
+        <p>Monthly KPIs and charts show where your money goes.</p>
+      </div>
+
+      <div class="card">
+        <h3>Save</h3>
+        <p>Follow your net balance and savings rate month by month.</p>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main class="container">
-    <!-- Summary -->
-    <section class="card card-summary">
-      <div class="summary-left">
-        <div class="label">Total Balance</div>
-        <div id="totalBalance" class="big">0.00</div>
-        <div class="muted">All income minus all expenses</div>
-      </div>
+  <section id="start">
+    <div class="center-container">
+      <div class="bg-symbol" aria-hidden="true">$</div>
 
-      <div class="summary-grid">
-        <div class="mini">
-          <div class="mini-label">Income this month</div>
-          <div id="incomeM" class="mini-value">0.00</div>
-        </div>
-        <div class="mini">
-          <div class="mini-label">Expenses this month</div>
-          <div id="expenseM" class="mini-value">0.00</div>
-        </div>
-        <div class="mini">
-          <div class="mini-label">Net this month</div>
-          <div id="netM" class="mini-value">0.00</div>
-        </div>
-        <div class="mini">
-          <div class="mini-label">Savings rate</div>
-          <div id="savingsRate" class="mini-value">–</div>
-          <div class="mini-hint">Net ÷ income this month</div>
-        </div>
-      </div>
-    </section>
+      <h2 class="title">COIN GUARD</h2>
+      <p class="subtitle">Smart Budget Protection</p>
+      <p class="subtext">Track · Analyze · Save</p>
+      <p class="desc">Your money.<br>Safer. Simpler.</p>
 
-    <!-- Charts -->
-    <section class="charts">
-      <div class="card chart-card">
-        <div class="card-head">
-          <h2>Spending by category</h2>
-          <span class="muted small" id="categoryPeriod"></span>
-        </div>
-        <div class="chart-box">
-          <canvas id="categoryChart" aria-label="Expenses by category"></canvas>
-          <div id="categoryEmpty" class="chart-empty hidden">No expenses this month yet.</div>
-        </div>
-      </div>
-
-      <div class="card chart-card">
-        <div class="card-head">
-          <h2>Income vs expenses</h2>
-          <span class="muted small">Last 6 months</span>
-        </div>
-        <div class="chart-box">
-          <canvas id="monthlyChart" aria-label="Monthly income and expenses"></canvas>
-        </div>
-      </div>
-    </section>
-
-    <!-- Recent Activity -->
-    <section class="card">
-      <div class="card-head">
-        <h2>Recent Activity</h2>
-        <button id="toggleAll" class="link-btn">See all transactions →</button>
-      </div>
-
-      <div id="txList" class="tx-list"></div>
-
-      <!-- All transactions (hidden by default) -->
-      <div id="allWrap" class="all-wrap hidden">
-        <div class="all-head">
-          <h3>All transactions</h3>
-          <div class="filters">
-            <select id="filterType" class="input">
-              <option value="all">All</option>
-              <option value="income">Income</option>
-              <option value="expense">Expense</option>
-            </select>
-            <input id="searchText" class="input" type="text" placeholder="Search title or category..." />
-            <button id="btnReset" class="btn btn-light">Reset demo data</button>
-            <button id="btnClearAll" class="btn btn-light">Clear all</button>
-          </div>
-        </div>
-
-        <div id="allList" class="tx-list"></div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Modal Overlay -->
-  <div id="overlay" class="overlay hidden"></div>
-
-  <!-- Modal -->
-  <div id="txModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-header">
-      <h3 id="modalTitle">Add Transaction</h3>
-      <button id="closeModal" class="icon-btn" aria-label="Close">✕</button>
+      <a href="dashboard.html" class="start-btn">Open dashboard →</a>
     </div>
 
-    <form id="txForm" class="modal-body" autocomplete="off">
-      <input type="hidden" id="txType" value="income" />
+    <p class="footer-text">
+      Gain control of your income &amp; expenses with a simple, powerful tool.
+    </p>
+  </section>
 
-      <label class="field">
-        <span class="field-label">Title</span>
-        <input id="txTitle" class="input" type="text" placeholder="e.g. Salary" required />
-      </label>
-
-      <div class="row">
-        <label class="field grow">
-          <span class="field-label">Amount</span>
-          <input id="txAmount" class="input" type="number" step="0.01" min="0.01" placeholder="e.g. 1200" required />
-        </label>
-
-        <label class="field">
-          <span class="field-label">Category</span>
-          <!-- Options are filled by dashboard.js depending on income / expense -->
-          <select id="txCategory" class="input" required></select>
-        </label>
-      </div>
-
-      <label class="field">
-        <span class="field-label">Date</span>
-        <input id="txDate" class="input" type="date" required />
-      </label>
-
-      <div class="modal-footer">
-        <button type="button" id="cancelModal" class="btn btn-light">Cancel</button>
-        <button type="submit" class="btn btn-dark" id="saveTx">Save</button>
-      </div>
-
-      <p class="hint">Tip: Press <kbd>Esc</kbd> to close.</p>
-    </form>
-  </div>
-
-  <script src="../vendor/chart.umd.js"></script>
-  <script src="dashboard.js"></script>
 </body>
 </html>
