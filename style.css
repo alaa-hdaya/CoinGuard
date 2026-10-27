@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  color: #111;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 24px;
+}
+
+#about {
+  background: #f7f7f7;
+}
+
+h1 {
+  font-size: clamp(38px, 9vw, 60px);
+  letter-spacing: 5px;
+}
+
+h2 {
+  font-size: clamp(28px, 6vw, 40px);
+  margin-bottom: 20px;
+}
+
+p {
+  max-width: 720px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.scroll-down {
+  margin-top: 40px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #111;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.scroll-down:hover {
+  opacity: 1;
+}
+
+/* Features */
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.card p {
+  font-size: 16px;
+}
+
+/* Call to action */
+.center-container {
+  position: relative;
+  width: 100%;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bg-symbol {
+  position: absolute;
+  font-size: clamp(260px, 50vw, 420px);
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.05);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  z-index: -1;
+  user-select: none;
+}
+
+.title {
+  font-size: clamp(38px, 9vw, 60px);
+  letter-spacing: 8px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 22px;
+  font-weight: 300;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.subtext {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.desc {
+  margin-bottom: 45px;
+}
+
+.start-btn {
+  display: inline-block;
+  background: black;
+  color: white;
+  padding: 18px 40px;
+  border-radius: 40px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.start-btn:hover {
+  opacity: 0.8;
+}
+
+.footer-text {
+  margin-top: 30px;
+  font-size: 17px;
+  color: #666;
+}
